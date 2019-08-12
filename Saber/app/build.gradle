@@ -29,7 +29,7 @@ dependencies {
 
 android.applicationVariants.all { variant ->
     variant.outputs.all {
-        def name = "com.pathfinder.saber- "
+        def name = "com.pathfinder.saber-"
         outputFileName = name + "${variant.versionName}.apk"
     }
 }
