@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void toggleImag(boolean status){
         if(status){
-            toggleButton.setButtonDrawable(R.drawable.ic_lamplit);
+            toggleButton.setButtonDrawable(R.drawable.ic_roomlit);
         } else{
-            toggleButton.setButtonDrawable(R.drawable.ic_lampunlit);
+            toggleButton.setButtonDrawable(R.drawable.ic_roomunlit);
         }
     }
 
