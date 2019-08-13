@@ -17,16 +17,13 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private CameraManager mCameraManager;
     private String mCameraId;
-
     private ToggleButton toggleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
         ImageButton info = findViewById(R.id.infoButt);
@@ -54,9 +51,13 @@ public class MainActivity extends AppCompatActivity {
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
-
+        try {
+            mCameraManager.setTorchMode(mCameraId, false);
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
         toggleButton = findViewById(R.id.toggleButton);
-
+        toggleButton.setButtonDrawable(R.drawable.ic_roomunlit);
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -69,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
     public void showNoFlashError() {
         AlertDialog alert = new AlertDialog.Builder(this)
                 .create();
-        alert.setTitle("Oops!");
-        alert.setMessage("Flash not available in this device...");
-        alert.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener() {
+        alert.setTitle("Error");
+        alert.setMessage("Flash hardware not found.");
+        alert.setButton(DialogInterface.BUTTON_POSITIVE, "Okay", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
