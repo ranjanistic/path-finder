@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/raleway"
-                android:text="@string/_1_1_stable_release"
+                android:text="@string/stable_release"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"

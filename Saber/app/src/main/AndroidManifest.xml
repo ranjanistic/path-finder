@@ -18,8 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".About"
-            />
+        <activity android:name=".About" />
         <activity
             android:name=".Splash"
             android:theme="@style/SplashTheme">
@@ -30,9 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:name=".MainActivity"/>
     </application>
 
 </manifest>

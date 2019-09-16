@@ -1,9 +1,9 @@
 <vector android:autoMirrored="true" android:height="400dp"
     android:viewportHeight="250" android:viewportWidth="250"
     android:width="400dp" xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillAlpha="0.8" android:fillColor="#f9f9f9"
+    <path android:fillAlpha="0.9" android:fillColor="#f9f9f9"
         android:pathData="M10.694,131.063A118.305,117.227 0,0 1,129.918 15.062,118.305 117.227,0 0,1 247.297,132.895 118.305,117.227 0,0 1,128.685 249.511,118.305 117.227,0 0,1 10.688,132.285"
-        android:strokeAlpha="1" android:strokeColor="#000000"
+        android:strokeAlpha="1" android:strokeColor="#f9f9f9"
         android:strokeLineCap="round" android:strokeLineJoin="miter" android:strokeWidth="0"/>
     <path android:fillAlpha="1" android:fillColor="#000000"
         android:pathData="M162.168,144.855h13.034v14.057h-13.034z"

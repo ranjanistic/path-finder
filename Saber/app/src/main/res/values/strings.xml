@@ -4,7 +4,7 @@
     <string name="app_info">app info</string>
     <string name="instagram">Instagram</string>
     <string name="follow_on_social">Follow on social :</string>
-    <string name="_1_1_stable_release">1.1-stable-release</string>
+    <string name="stable_release">1.2-stable-release</string>
     <string name="version">Version :</string>
     <string name="about">About</string>
 </resources>

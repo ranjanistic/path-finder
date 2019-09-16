@@ -1,5 +1,6 @@
 package com.pathfinder.saber;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -44,20 +45,20 @@ public class MainActivity extends AppCompatActivity {
             showNoFlashError();
         }
 
-
+        toggleButton = findViewById(R.id.toggleButton);
         mCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         try {
             mCameraId = mCameraManager.getCameraIdList()[0];
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
+
         try {
             mCameraManager.setTorchMode(mCameraId, false);
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
-        toggleButton = findViewById(R.id.toggleButton);
-        toggleButton.setButtonDrawable(R.drawable.ic_roomunlit);
+
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void switchFlashLight(boolean status) {
         try {
+
             mCameraManager.setTorchMode(mCameraId, status);
         } catch (CameraAccessException e) {
             e.printStackTrace();
