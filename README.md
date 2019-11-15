@@ -2,6 +2,8 @@
 
 For the main page of this application, [click here](https://ranjanistic.github.io/path-finder/saber.html)
 
+The [**release**](https://github.com/ranjanistic/path-finder/releases) section will contain future updates and releases of the application, and the _source code_ is always available on GitHub.
+
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in the site, from the content in the Markdown files.
 
 ## Contribution Guidelines
@@ -15,5 +17,3 @@ Try focusing on
 - Color themes and user accessibility
 
 ```
-
-The [**release**](https://github.com/ranjanistic/path-finder/releases) section will contain future updates and releases of the application, and the _source code_ is always available here.
