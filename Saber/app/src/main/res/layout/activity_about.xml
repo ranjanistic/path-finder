@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal"
-    android:backgroundTint="@color/teal"
+    android:background="@color/colorPrimaryDark"
+    android:backgroundTint="@color/colorPrimaryDark"
     tools:context=".About">
 
     <LinearLayout
@@ -72,26 +72,34 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/raleway"
+                android:paddingTop="5dp"
                 android:text="@string/follow_on_social"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/instaButt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="38sp"
+                android:layout_height="38sp"
                 android:layout_margin="10dp"
-                android:background="@drawable/square_btn"
-                android:backgroundTint="@color/teal"
-                android:fontFamily="monospace"
-                android:text="@string/instagram"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:background="@drawable/round_btn"
+                android:backgroundTint="@color/pink"
+                android:padding="3sp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_instagram" />
+
+            <ImageButton
+                android:id="@+id/tweetButt"
+                android:layout_width="38sp"
+                android:layout_height="38sp"
+                android:layout_margin="10dp"
+                android:background="@drawable/round_btn"
+                android:backgroundTint="@color/blue"
+                android:padding="3sp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_twitter" />
         </LinearLayout>
     </LinearLayout>
 
