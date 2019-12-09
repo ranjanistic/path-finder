@@ -1,6 +1,8 @@
-# Simple torch application
+# Saber - An android flashlight application.
 
 For the main page of this application, [click here](https://ranjanistic.github.io/path-finder/saber.html)
+
+The [**release**](https://github.com/ranjanistic/path-finder/releases) section will contain future updates and releases of the application, and the [source code](https://github.com/ranjanistic/path-finder/) is always available on GitHub.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in the site, from the content in the Markdown files.
 
@@ -15,5 +17,15 @@ Try focusing on
 - Color themes and user accessibility
 
 ```
+## Developer guidelines
 
-The [**release**](https://github.com/ranjanistic/path-finder/releases) section will contain future updates and releases of the application, and the _source code_ is always available here.
+Original release has been developed in java, yet kotlin development is also welcomed. Vector drawables are svgs originally, converted to XML files, thanks to Android Studio inbuilt vector drawables support.
+The about section currently credits to the creator only, but anyone committing significant changes will be link credited in-app.
+The application has been developed in [Android Studio](https://developer.android.com/studio/).
+
+## Fork guide
+
+You can fork this repo as it's trial developed by creator, to learn yourself about start developing a basic android application.
+The display website of this application is also included in the repo, [check here](https://github.com/ranjanistic/path-finder/blob/master/saber.html), although you're not advised to modify that.
+
+Enjoy checking out this repo!
