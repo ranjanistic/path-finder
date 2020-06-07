@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">सेबर</string>
+    <string name="power">शक्ति</string>
+    <string name="app_info">अनुप्रयोग की जानकारी</string>
+    <string name="about">विषय</string>
+    <string name="textunlit">स्विच दबाएं बत्ती जलाएँ.</string>
+    <string name="textlit">स्विच दबाएँ बत्ती बुझाएँ</string>
+    <string name="flash_error_title">आपके फोन में कुछ कमी है</string>
+    <string name="flash_error_message">आपके फोन में टॉर्च नहीं है, या सेबर इसे एक्सेस करने में असमर्थ है.</string>
+    <string name="sad">उदासी</string>
+    <string name="flash_view">फ्लैश का नजारा</string>
+</resources>

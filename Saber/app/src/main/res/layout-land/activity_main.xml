@@ -14,15 +14,13 @@
         android:id="@+id/flashToggle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:contentDescription="@string/flash_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/square_btn_teal"
-        android:paddingTop="92dp"
-        app:srcCompat="@drawable/ic_roomunlit"
-        />
+        android:contentDescription="@string/flash_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subheading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_roomunlit" />
     <TextView
         android:id="@+id/heading"
         android:layout_width="wrap_content"
@@ -33,25 +31,26 @@
         android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/subheading"
+        app:layout_constraintStart_toStartOf="@id/subheading"
+        app:layout_constraintBottom_toTopOf="@id/subheading"
+        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/subheading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:padding="8dp"
+        android:layout_margin="12dp"
+        android:padding="18dp"
         android:text="@string/textunlit"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0" />
 
     <ImageButton

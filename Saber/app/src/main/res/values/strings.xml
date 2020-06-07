@@ -2,11 +2,12 @@
     <string name="app_name">Saber</string>
     <string name="power">power</string>
     <string name="app_info">app info</string>
-    <string name="instagram">Instagram</string>
-    <string name="follow_on_social">Follow on social :</string>
-    <string name="stable_release">1.3-stable-release</string>
     <string name="version">Version :</string>
     <string name="about">About</string>
     <string name="textunlit">Tap the switch to light up the room.</string>
     <string name="textlit">Tap the switch to turn off the light.</string>
+    <string name="flash_error_title">Your phone lacks something</string>
+    <string name="flash_error_message">This device doesn\'t seem to have a flashlight, or Saber is unable to access it.</string>
+    <string name="sad">Sad</string>
+    <string name="flash_view">Flash view</string>
 </resources>
