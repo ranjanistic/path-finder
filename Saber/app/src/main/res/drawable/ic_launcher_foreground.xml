@@ -7,7 +7,7 @@
       android:translateY="69.882355">
     <path
         android:pathData="M146.923,126.204L307.67,343.486A4.471,4.306 97.427,0 1,306.853 349.756L222.602,417.139A4.471,4.306 97.427,0 1,216.564 416.352L55.817,199.07A4.471,4.306 97.427,0 1,56.634 192.8L140.885,125.417A4.471,4.306 97.427,0 1,146.923 126.204z"
-        android:strokeAlpha="0.2"
+        android:strokeAlpha="0"
         android:strokeLineJoin="miter"
         android:strokeWidth="0"
         android:fillColor="#1a1a1a"

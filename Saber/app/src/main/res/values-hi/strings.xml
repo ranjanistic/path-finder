@@ -10,4 +10,5 @@
     <string name="flash_error_message">आपके फोन में टॉर्च नहीं है, या सेबर इसे एक्सेस करने में असमर्थ है.</string>
     <string name="sad">उदासी</string>
     <string name="flash_view">फ्लैश का नजारा</string>
+    <string name="lamp">बत्ती</string>
 </resources>
