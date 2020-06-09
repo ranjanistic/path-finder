@@ -8,17 +8,25 @@ import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraManager
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
+import com.google.android.material.snackbar.Snackbar
+
 
 class MainActivity : AppCompatActivity() {
     private var mCameraManager: CameraManager? = null
@@ -28,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private var fadeoff: Animation? = null
     private var fadeon: Animation? = null
     private var state = true
+    lateinit var mInterstitialAd: InterstitialAd
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
@@ -40,6 +49,10 @@ class MainActivity : AppCompatActivity() {
             window.attributes.layoutInDisplayCutoutMode =
                     WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
         }
+        MobileAds.initialize(this, "ca-app-pub-9252793240012402~1634633493")
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
         fadeoff = AnimationUtils.loadAnimation(applicationContext, R.anim.fadelitoff)
         fadeon = AnimationUtils.loadAnimation(applicationContext, R.anim.fadeliton)
         subhead = findViewById(R.id.subheading)
@@ -47,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<ImageButton>(R.id.infoButt).setOnClickListener {
             startActivity(Intent(this@MainActivity, About::class.java))
-            overridePendingTransition(R.anim.fadeliton,R.anim.fadelitoff)
+            overridePendingTransition(R.anim.fadeliton, R.anim.fadelitoff)
         }
         var isFlashAvailable = applicationContext.packageManager
                 .hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
@@ -57,12 +70,12 @@ class MainActivity : AppCompatActivity() {
                 mCameraId = mCameraManager?.cameraIdList?.get(0)
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     mCameraManager?.setTorchMode(mCameraId!!, false)
-                } else isFlashAvailable= false
+                } else isFlashAvailable = false
             } catch (e: CameraAccessException) {
                 isFlashAvailable = false
             }
         } else isFlashAvailable = false
-        flash.setOnClickListener{
+        flash.setOnClickListener {
             if (!isFlashAvailable) {
                 showNoFlashError()
             } else {
@@ -73,11 +86,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun adListener() {
+        mInterstitialAd.adListener = object : AdListener() {
+            override fun onAdClosed() {
+                Snackbar.make(findViewById(R.id.mainActivity), getString(R.string.remove_ads), 8000)
+                        .setAction("Show me") {
+                            Toast.makeText(applicationContext, getString(R.string.unlock_premium), Toast.LENGTH_LONG).show()
+                            startActivity(Intent(this@MainActivity, About::class.java))
+                            overridePendingTransition(R.anim.fadeliton, R.anim.fadelitoff)
+                        }
+            }
+        }
+    }
+    override fun onRestart() {
+        super.onRestart()
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+            adListener()
+        }
+    }
     private fun showNoFlashError() {
         val alert = AlertDialog.Builder(this).create()
         alert.setTitle(getString(R.string.flash_error_title))
         alert.setMessage(getString(R.string.flash_error_message))
-        alert.setIcon(ContextCompat.getDrawable(this,R.drawable.ic_launcher_foreground))
+        alert.setIcon(ContextCompat.getDrawable(this, R.drawable.ic_launcher_foreground))
         alert.setButton(DialogInterface.BUTTON_POSITIVE, getString(R.string.sad)) { _, _ -> finish() }
         alert.show()
     }
