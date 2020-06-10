@@ -1,8 +1,11 @@
 package com.pathfinder.saber
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +28,12 @@ class About : AppCompatActivity() {
             overridePendingTransition(R.anim.fadeliton, R.anim.fadelitoff)
         }
         findViewById<TextView>(R.id.version).text = BuildConfig.VERSION_NAME
+        findViewById<Button>(R.id.premiumButton).setOnClickListener{
+            startActivity(
+                    Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/"))
+            )
+            //TODO: replace with saber+ link
+        }
     }
 
     override fun onBackPressed() {

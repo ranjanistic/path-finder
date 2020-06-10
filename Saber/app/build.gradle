@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 2
-        versionName "2.0-stable-release"
+        versionName "2.1-stable-release"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         multiDexEnabled true
         vectorDrawables{

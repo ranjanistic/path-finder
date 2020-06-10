@@ -75,6 +75,7 @@
                 <group
                     android:rotation="-45">
                     <path
+                        android:fillAlpha="0"
                         android:pathData="M97.92835 79.37632H98.71235A1.052652 1.052652 0 0 1 99.76501 80.42897V102.1012A1.052652 1.052652 0 0 1 98.71235 103.1539H97.92835A1.052652 1.052652 0 0 1 96.87569 102.1012V80.42897A1.052652 1.052652 0 0 1 97.92835 79.37632Z"
                         android:fillColor="#3EA745"
                         android:strokeLineCap="round" />
@@ -87,6 +88,7 @@
                 <group
                     android:rotation="135.0001">
                     <path
+                        android:fillAlpha="0"
                         android:pathData="M82.49881 -156.4364H82.49881A1.309803 2.614607 0 0 1 83.80861 -153.8218V-99.99167A1.309803 2.614607 0 0 1 82.49881 -97.37707H82.49881A1.309803 2.614607 0 0 1 81.189 -99.99167V-153.8218A1.309803 2.614607 0 0 1 82.49881 -156.4364Z"
                         android:fillColor="#3EA745"
                         android:strokeLineCap="round" />
@@ -99,6 +101,7 @@
                 <group
                     android:rotation="-45">
                     <path
+                        android:fillAlpha="0"
                         android:pathData="M-154.6831 -138.791H-154.6831A1.445311 2.572199 0 0 1 -153.2378 -136.2188V-83.2618A1.445311 2.572199 0 0 1 -154.6831 -80.6896H-154.6831A1.445311 2.572199 0 0 1 -156.1284 -83.2618V-136.2188A1.445311 2.572199 0 0 1 -154.6831 -138.791Z"
                         android:fillColor="#3EA745"
                         android:strokeLineCap="round" />
@@ -111,6 +114,7 @@
                 <group
                     android:rotation="135">
                     <path
+                        android:fillAlpha="0"
                         android:pathData="M137.9173 -195.1197H137.9173A1.309796 1.839079 0 0 1 139.2271 -193.2806V-155.4172A1.309796 1.839079 0 0 1 137.9173 -153.5781H137.9173A1.309796 1.839079 0 0 1 136.6075 -155.4172V-193.2806A1.309796 1.839079 0 0 1 137.9173 -195.1197Z"
                         android:fillColor="#3EA745"
                         android:strokeLineCap="round" />
@@ -127,6 +131,7 @@
                 <group
                     android:rotation="-135">
                     <path
+                        android:fillAlpha="0"
                         android:pathData="M-194.7315 -139.158H-193.2437A0.7014041 0.7014041 0 0 1 -192.5423 -138.4566V-124.0159A0.7014041 0.7014041 0 0 1 -193.2437 -123.3145H-194.7315A0.7014041 0.7014041 0 0 1 -195.4329 -124.0159V-138.4566A0.7014041 0.7014041 0 0 1 -194.7315 -139.158Z"
                         android:fillColor="#3EA745"
                         android:strokeLineCap="round" />

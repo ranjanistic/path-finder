@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
         }
         MobileAds.initialize(this, "ca-app-pub-9252793240012402~1634633493")
         mInterstitialAd = InterstitialAd(this)
+
+        //TODO: replace with actual adUnitId ca-app-pub-9252793240012402/9129980131
         mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
         mInterstitialAd.loadAd(AdRequest.Builder().build())
         fadeoff = AnimationUtils.loadAnimation(applicationContext, R.anim.fadelitoff)
