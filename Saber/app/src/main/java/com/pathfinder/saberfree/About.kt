@@ -1,4 +1,4 @@
-package com.pathfinder.saber
+package com.pathfinder.saberfree
 
 import android.content.Intent
 import android.net.Uri
@@ -30,9 +30,8 @@ class About : AppCompatActivity() {
         findViewById<TextView>(R.id.version).text = BuildConfig.VERSION_NAME
         findViewById<Button>(R.id.premiumButton).setOnClickListener{
             startActivity(
-                    Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/"))
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.pathfinder.saber"))
             )
-            //TODO: replace with saber+ link
         }
     }
 

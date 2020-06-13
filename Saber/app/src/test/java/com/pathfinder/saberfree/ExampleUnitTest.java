@@ -1,4 +1,4 @@
-package com.pathfinder.saber;
+package com.pathfinder.saberfree;
 
 import org.junit.Test;
 

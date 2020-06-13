@@ -1,4 +1,4 @@
-package com.pathfinder.saber
+package com.pathfinder.saberfree
 
 import android.content.Context
 import android.content.DialogInterface
@@ -8,7 +8,6 @@ import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraManager
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -52,8 +51,8 @@ class MainActivity : AppCompatActivity() {
         MobileAds.initialize(this, "ca-app-pub-9252793240012402~1634633493")
         mInterstitialAd = InterstitialAd(this)
 
-        //TODO: replace with actual adUnitId ca-app-pub-9252793240012402/9129980131
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        //example ca-app-pub-3940256099942544/1033173712
+        mInterstitialAd.adUnitId = "ca-app-pub-9252793240012402/9129980131"
         mInterstitialAd.loadAd(AdRequest.Builder().build())
         fadeoff = AnimationUtils.loadAnimation(applicationContext, R.anim.fadelitoff)
         fadeon = AnimationUtils.loadAnimation(applicationContext, R.anim.fadeliton)

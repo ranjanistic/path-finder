@@ -1,4 +1,4 @@
-package com.pathfinder.saber;
+package com.pathfinder.saberfree;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.pathfinder.saber", appContext.getPackageName());
+        assertEquals("com.pathfinder.saberfree", appContext.getPackageName());
     }
 }
