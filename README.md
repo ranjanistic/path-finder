@@ -1,5 +1,6 @@
 # Saber - An android flashlight application.
 
+[![](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.pathfinder.saberfree)
 For the main page of this application, [click here](https://ranjanistic.github.io/path-finder/saber.html)
 
 The [**release**](https://github.com/ranjanistic/path-finder/releases) section will contain future updates and releases of the application, and the [source code](https://github.com/ranjanistic/path-finder/) is always available on GitHub.
